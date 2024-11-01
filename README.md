@@ -49,7 +49,7 @@ pip install -r requirements.txt
 ```
 2. Run the application (see below regarding environment variables)
 ```bash
-export DB_USERNAME=myusername
+export DB_USERNAME=myuser
 export DB_PASSWORD=mypassword
 export DB_HOST=127.0.0.1
 export DB_PORT=5432
@@ -82,6 +82,7 @@ The benefit here is that it's explicitly set. However, note that the `DB_PASSWOR
 
 1. To deploy new application
 ```bash
+kubectl  apply -f deployment/configmap.yaml
 kubectl  apply -f deployment/coworking.yaml
 ```
 

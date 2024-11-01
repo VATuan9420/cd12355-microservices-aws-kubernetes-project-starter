@@ -47,6 +47,10 @@ spec:
         envFrom:
         - configMapRef:
             name: cw
-        - secretRef:
-            name: cw
+        env:
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: cw
+              key: DB_PASSWORD
       restartPolicy: Always
